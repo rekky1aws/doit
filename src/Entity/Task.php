@@ -31,6 +31,10 @@ class Task
     #[ORM\Column(nullable: true)]
     private ?\DateTime $doneDate = null;
 
+    #[ORM\ManyToOne(inversedBy: 'tasks')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Group $taskGroup = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +108,18 @@ class Task
     public function setDoneDate(?\DateTime $doneDate): static
     {
         $this->doneDate = $doneDate;
+
+        return $this;
+    }
+
+    public function getTaskGroup(): ?Group
+    {
+        return $this->taskGroup;
+    }
+
+    public function setTaskGroup(?Group $taskGroup): static
+    {
+        $this->taskGroup = $taskGroup;
 
         return $this;
     }
