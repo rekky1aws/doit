@@ -3,23 +3,25 @@
   <div class="task-top">
     <div class="task-name"> {{ task.name }} </div>
     {% if task.isDone %}
-      <div class="task-status status-done">done</div>
+      <div class="task-status status-done"></div>
     {% else %}
-      <div class="task-status status-pending">pending</div>
+      <div class="task-status status-pending"></div>
     {% endif %}
     
   </div>
-  <div class="task-tags">
-    {% for tag in task.tags %}
-      <div class="tag"> {{ tag.name }} </div>
-    {% endfor %}
+  <div class="taks-middle">
+    <div class="task-tags">
+      {% for tag in task.tags %}
+        <div class="tag"> {{ tag.name }} </div>
+      {% endfor %}
+    </div>
+    {# 
+    {% if task.description %}
+        <div class="task-description"> {{ task.description }} </div>
+    {% endif %}
+    <div class="task-desc"> {{ task.description }} </div>
+    #}
   </div>
-  {# 
-  {% if task.description %}
-      <div class="task-description"> {{ task.description }} </div>
-  {% endif %}
-  <div class="task-desc"> {{ task.description }} </div>
-  #}
   <div class="task-bottom">
     {% if task.date %}
       <div class="task-date"> {{ task.date }} </div>

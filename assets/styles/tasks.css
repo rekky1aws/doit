@@ -10,15 +10,24 @@
   gap: 0.25rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  background-color: #FAFAFA;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .task-group {
   padding: 0.25rem;
 }
 
-.task-top {
+.task-top, .task-middle, .task-bottom {
   display:flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.task-name {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .task-bottom {
@@ -26,10 +35,28 @@
   gap: 0.125rem;
 }
 
+.task-status {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
 .status-done {
-  color: #88FF88;
+  background-color: #88FF88;
 }
 
 .status-pending {
-  color: red;
+  background-color: red;
+}
+
+.task-tags {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0 1rem;
+}
+
+.task-tags > .tag {
+  padding: 0.25rem  0.5rem;
+  background-color: #F2F2F2;
+  border-radius: 1rem;
 }
