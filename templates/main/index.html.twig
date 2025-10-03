@@ -3,11 +3,13 @@
 {% block title %}DoIt - {{ page_title }} {% endblock %}
 
 {% block body %}
-  {% if tasks is empty %}
-  <div>No task in database.</div>
-  {% else %}
-    {% for task in tasks %}
-      <div class="task">{{ task.name }}</div>
-    {% endfor %}
-  {% endif %}
+<div class="task-container">
+    {% if tasks is empty %}
+    <div>No task in database.</div>
+    {% else %}
+      {% for task in tasks %}
+        {% include "main/components/taskCard.html.twig" %}
+      {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}

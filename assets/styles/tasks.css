@@ -1,0 +1,35 @@
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.task-group {
+  padding: 0.25rem;
+}
+
+.task-top {
+  display:flex;
+  justify-content: space-between;
+}
+
+.task-bottom {
+  display:flex;
+  gap: 0.125rem;
+}
+
+.status-done {
+  color: #88FF88;
+}
+
+.status-pending {
+  color: red;
+}

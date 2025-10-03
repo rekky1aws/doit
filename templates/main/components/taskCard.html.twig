@@ -1,0 +1,30 @@
+<div class="task-card">
+  <div class="task-group group" style="background-color: {{ task.taskGroup.color }};">{{ task.taskGroup.name }} </div>
+  <div class="task-top">
+    <div class="task-name"> {{ task.name }} </div>
+    {% if task.isDone %}
+      <div class="task-status status-done">done</div>
+    {% else %}
+      <div class="task-status status-pending">pending</div>
+    {% endif %}
+    
+  </div>
+  <div class="task-tags">
+    {% for tag in task.tags %}
+      <div class="tag"> {{ tag.name }} </div>
+    {% endfor %}
+  </div>
+  {# 
+  {% if task.description %}
+      <div class="task-description"> {{ task.description }} </div>
+  {% endif %}
+  <div class="task-desc"> {{ task.description }} </div>
+  #}
+  <div class="task-bottom">
+    {% if task.date %}
+      <div class="task-date"> {{ task.date }} </div>
+    {% endif %}
+    <div class="task-urgency"> U : {{ task.urgency }} / 5 </div>
+    <div class="task-signifiance"> I : {{ task.signifiance }} / 5 </div>
+  </div>
+</div>
