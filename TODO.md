@@ -7,3 +7,5 @@
 + Views
     + Main (view all tasks with menus)
     + Create Task / Edit Task
+
++ Import tasks.css only when needed.
