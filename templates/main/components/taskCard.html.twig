@@ -7,7 +7,7 @@
     {% else %}
       <div class="task-status status-pending"></div>
     {% endif %}
-    
+    <a href="{{ path('app_edit_by_id', {id: task.id}) }}">Edit</a>
   </div>
   <div class="taks-middle">
     <div class="task-tags">
