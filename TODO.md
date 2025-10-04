@@ -14,7 +14,7 @@
 
 + Views
     + Main (view all tasks with menus)
-        + Urgency and Signifiance better display
+        + Update to use new layout
     + Create Task / Edit Task
 
 + Import tasks.css only when needed.
