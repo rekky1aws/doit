@@ -1,6 +1,11 @@
 # TODO
 (It's funny, it's the todo list's todo list)
 
++ Fixtures
+    + Groups
+    + Tags
+    + Tasks
+
 + Task
     + Change `isDone (bool)` to `status (string: done, urgent, pending)`
 
