@@ -2,9 +2,7 @@
 (It's funny, it's the todo list's todo list)
 
 + Fixtures
-    + Groups
-    + Tags
-    + Tasks
+    + Import fixtures from $data.
 
 + Task
     + Change `isDone (bool)` to `status (string: done, urgent, pending)`
