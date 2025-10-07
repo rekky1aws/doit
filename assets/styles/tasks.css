@@ -56,8 +56,8 @@
 }
 
 .task-tags > .tag {
-  padding: 0.25rem  0.5rem;
-  background-color: #F2F2F2;
+  padding: 0.25rem  0.75rem;
+  background-color: #E3E3E3;
   border-radius: 1rem;
 }
 
