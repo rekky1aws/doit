@@ -14,18 +14,18 @@ class AppFixtures extends Fixture
   public function load(ObjectManager $manager): void
   {
     $data = [
-      "group" => [
+      "groups" => [
         "Default" => "#aaaaaa",
         "Perso" => "#d6c28b",
         "Pro" => "#b4d69a"
       ],
-      "tag" => [
+      "tags" => [
         "code",
         "php",
-        "symdony",
+        "symfony",
         "halloween"
       ],
-      "task" => [
+      "tasks" => [
         [
           "group" => "Perso",
           "name" => "Finir le costume d'Halloween",
@@ -49,7 +49,54 @@ class AppFixtures extends Fixture
       ]
     ];
 
-    // TODO : read fixtures from data
+    // Groups
+    $groups = [];
+
+    foreach ($data['groups'] as $groupName => $groupColor) {
+      $newGroup = new Group();
+      $newGroup->setName($groupName)->setColor($groupColor);
+      $groups[$groupName] = $newGroup;
+      $manager->persist($newGroup);
+    }
+
+    // Tags
+    $tags = [];
+
+    foreach ($data['tags'] as $tagName) {
+      $newTag = new Tag();
+      $newTag->setName($tagName);
+      $tags[$tagName] = $newTag;
+      $manager->persist($newTag);
+    }
+
+    // Tasks
+    foreach ($data['tasks'] as $task) {
+      $newTask = new Task();
+      $newTask
+        ->setName($task['name'])
+        ->setTaskGroup($groups[$task['group']])
+        ->setSignifiance($task['signifiance'])
+        ->setUrgency($task['urgency'])
+        ->setIsDone($task['is_done']);
+      
+      if ($task['date']) {
+        $newTask->setDate(\DateTime::createFromFormat('Y-m-d H:i:s', $task['date']));
+      } else {
+        $newTask->setDate(null);
+      }
+
+      if ($task['done_date']) {
+        $newTask->setDoneDate(\DateTime::createFromFormat('Y-m-d H:i:s', $task['done_date']));
+      } else {
+        $newTask->setDoneDate(null);
+      }
+
+      foreach ($task['tags'] as $tagName) {
+        $newTask->addTag($tags[$tagName]);
+      }
+
+      $manager->persist($newTask);
+    }
 
     $manager->flush();
   }
