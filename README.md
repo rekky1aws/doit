@@ -20,19 +20,22 @@ git clone https://github.com/rekky1aws/doit.git
 cd doit
 ```
 
-### 3. .env file
+### 3. Database setup
+To run, this web app only needs to have an empty db with access rights. It's recommended to create a dedicated user with the same name of the database that will have all permissions on its database but none on anything else.
+
+### 4. .env file
 Copy `.env.template` to `.env`.
 Adapt line 34 with the user, password, db_name and MariaDB version corresponding to your project :
 ```
 DATABASE_URL="mysql://user:password@127.0.0.1:3306/db_name?serverVersion=12.0.2-MariaDB&charset=utf8mb4"
 ```
 
-### 4. Install dependencies
+### 5. Install dependencies
 ```bash
 composer install
 ```
 
-### 5. Run
+### 6. Run the server (dev mode)
 ```bash
 symfony server:start
 ```
