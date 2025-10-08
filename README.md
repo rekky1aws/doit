@@ -35,7 +35,22 @@ DATABASE_URL="mysql://user:password@127.0.0.1:3306/db_name?serverVersion=12.0.2-
 composer install
 ```
 
-### 6. Run the server (dev mode)
+### 6. Database initialization
+Create the layout of the tables from the last updated migration file
+```bash
+php bin/console doctrine:migration:migrate
+# or
+php bin/console do:mi:mi
+```
+
+Insert the fixtures (test data)
+```bash
+php  bin/console doctrine:fixtures:load
+#or
+pgp  bin/console  do:fi:lo
+```
+
+### 7. Run the server (dev mode)
 ```bash
 symfony server:start
 ```
