@@ -9,10 +9,14 @@ Productivity web app done in Symfony. A custom todo list with extra steps to sum
 
 ## Setup
 ### 1. Requirements
- + PHP
- + MariaDB
- + Composer
- + Symfony
+Required :
+ + [PHP](https://www.php.net/docs.php)
+ + [MariaDB](https://mariadb.org)
+ + [Composer](https://getcomposer.org)
+ + [Symfony](https://symfony.com)
+
+Optionnal :
+ + [phpMyAdmin](https://www.phpmyadmin.net)
 
 ### 2. Clone the repo
 ```bash
