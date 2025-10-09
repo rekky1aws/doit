@@ -14,6 +14,7 @@
             + Make groups clickable and redirecting to a view that displays only task in this group
         + TagsList
         + GroupsList
+        + Header
     + Main (view all tasks with menus)
         + Update to use new layout
     + Create Task / Edit Task
