@@ -22,5 +22,3 @@
             + Input at the end to add tags if needed
         + Selector to select group with a "new" choice that adds a text input and a color input for the new groups.
     + Filtered vues
-
-+ Import tasks.css only when needed.
