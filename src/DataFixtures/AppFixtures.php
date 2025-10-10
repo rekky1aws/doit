@@ -34,7 +34,8 @@ class AppFixtures extends Fixture
           "urgency" => 4,
           "tags" => ["halloween"],
           "is_done" => false,
-          "done_date" => null
+          "done_date" => null,
+          "description" => "Costume d'Halloween"
         ],
         [
           "group" => "Pro",
@@ -44,7 +45,8 @@ class AppFixtures extends Fixture
           "urgency" => 3,
           "tags" => ["code", "php", "symfony"],
           "is_done" => false,
-          "done_date" => null
+          "done_date" => null,
+          "description" => "Bah faut coder quoi"
         ]
       ]
     ];
@@ -77,6 +79,7 @@ class AppFixtures extends Fixture
         ->setTaskGroup($groups[$task['group']])
         ->setSignifiance($task['signifiance'])
         ->setUrgency($task['urgency'])
+        ->setDescription($task['description'])
         ->setIsDone($task['is_done']);
       
       if ($task['date']) {

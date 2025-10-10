@@ -43,6 +43,9 @@ class Task
     #[ORM\ManyToMany(targetEntity: Tag::class, mappedBy: 'tasks')]
     private Collection $tags;
 
+    #[ORM\Column(length: 255)]
+    private ?string $description = null;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
@@ -160,6 +163,18 @@ class Task
         if ($this->tags->removeElement($tag)) {
             $tag->removeTask($this);
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
 
         return $this;
     }

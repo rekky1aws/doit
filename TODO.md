@@ -4,9 +4,6 @@
 + Task
     + Change `isDone (bool)` to `status (string: done, urgent, pending)`
 
-+ Documentation
-    + Add links for technologies requirements.
-
 + Views
     + Components
         + TaskCard
