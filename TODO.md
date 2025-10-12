@@ -16,7 +16,7 @@ Bonus features :
 ## Pending
 + Edit task vue
     + Finish form html layout
-        + Radio group selector
+        + Group selector
         + Checkbox tags selector
     + Add a submit button
         + "Save" if task exists
