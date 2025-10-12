@@ -3,5 +3,77 @@
 {% block title %}DoIt - Task edition{% endblock %}
 
 {% block body %}
-{{ form(task_form) }}
+{{ form_start(task_form) }}
+    <div class="form-field task-form-field">
+      <label for="name">Name :</label>
+      <input 
+        type="text"
+        name="{{ field_name(task_form.name) }}"
+        id="{{ field_id(task_form.name) }}"
+        value="{{ field_value(task_form.name) }}"
+        placeholder="Name"
+      >
+    </div>
+    <div class="form-field task-form-field">
+      <label for="name">Date :</label>
+      <input 
+        type="datetime-local"
+        step="1"
+        name="{{ field_name(task_form.date) }}"
+        id="{{ field_id(task_form.date) }}"
+        {% if field_value(task_form.date) %}
+        value="{{ field_value(task_form.date)|date("Y-m-d\\TH:i:s" , "Europe/Paris") }}"
+        {% endif %}
+      >
+    </div>
+    <div class="form-field task-form-field">
+      <label for="name">Sigifiance :</label>
+      <input 
+        type="range"
+        min="1"
+        max="5"
+        step="1"
+        name="{{ field_name(task_form.signifiance) }}"
+        id="{{ field_id(task_form.signifiance) }}"
+        value="{{ field_id(task_form.signifiance) }}"
+      >
+    </div>
+    <div class="form-field task-form-field">
+      <label for="name">Urgency :</label>
+      <input 
+        type="range"
+        min="1"
+        max="5"
+        step="1"
+        name="{{ field_name(task_form.urgency) }}"
+        id="{{ field_id(task_form.urgency) }}"
+        value="{{ field_id(task_form.urgency) }}"
+      >
+    </div>
+    <div class="form-field task-form-field">
+      <label for="name">Done :</label>
+      <input 
+        type="checkbox"
+        name="{{ field_name(task_form.isDone) }}"
+        id="{{ field_id(task_form.isDone) }}"
+        value="{{ field_id(task_form.isDone) }}"
+      >
+    </div>
+    <div class="form-field task-form-field">
+      <label for="name">Done on :</label>
+      <input 
+        type="datetime-local"
+        step="1"
+        max="{{ "now"|date("Y-m-d\\TH:i:s" , "Europe/Paris") }}"
+        name=" {{ field_name(task_form.doneDate) }} "
+        id="{{ field_id(task_form.doneDate) }}"
+        {% if field_value(task_form.doneDate) %}
+        value="{{ field_value(task_form.doneDate)|date("Y-m-d\\TH:i:s" , "Europe/Paris") }}"
+        {% endif %}
+      >
+    </div>
+    {# TODO : Add radio group selector #}
+    {# TODO : Add checkbox tags selector #}
+
+{{ form_end(task_form) }}
 {% endblock %}
