@@ -1,19 +1,31 @@
 # TODO
-## Shorten
+## Important
 Required features :
-    + Create a Task
-    + Edit a task
-    + Validate a task
-    + Filtering Tasks
++ Create a Task
++ Edit a task
++ Validate a task
++ Filtering Tasks
 
 Bonus features :
     + Calendar
+
+## Pending
++ Edit task vue
+    + Finish form html layout
+    + Add a submit button
+        + "Save" if task exists
+        + "Create" if task is new
++ Edit controller
+    + On GET => edit vue
+    + On POST => create task in db (and tags and groups if needed)
+    + On PUT => update task
 
 ## General
 (It's funny, it's the todo list's todo list)
 
 + Task
     + Change `isDone (bool)` to `status (string: done, urgent, pending)`
+    + Add a `hidden (bool)` field to know if we display or not the 
 
 + Views
     + Components
