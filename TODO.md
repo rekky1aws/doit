@@ -16,11 +16,16 @@ Bonus features :
 ## Pending
 + Edit task vue
     + Finish form html layout
+        + Radio group selector
+        + Checkbox tags selector
     + Add a submit button
         + "Save" if task exists
         + "Create" if task is new
+
 + Edit controller
     + On GET => edit vue
+        + Fetch all tags
+        + Fetch all groups
     + On POST => create task in db (and tags and groups if needed)
     + On PUT => update task
 
