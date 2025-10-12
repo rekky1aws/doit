@@ -47,6 +47,17 @@ class AppFixtures extends Fixture
           "is_done" => false,
           "done_date" => null,
           "description" => "Bah faut coder quoi"
+        ],
+        [
+          "group" => "Default",
+          "name" => "Tache de test",
+          "date" => null,
+          "signifiance" => 1,
+          "urgency" => 5,
+          "tags" => [],
+          "is_done" => false,
+          "done_date" => "2025-08-31 15:00:00",
+          "description" => "Tache de test deja réalisée avec une date"
         ]
       ]
     ];
