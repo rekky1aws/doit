@@ -39,9 +39,15 @@ Bonus features :
         + Calendar
             + A small calendar display to show tasks (with a date) easier.
     + Main (view all tasks with menus)
-        + Update to use new layout
+        + By default, display only task with low `isDone`.
+        + List of Tags
+        + List of groups
+        + Header
     + Create Task / Edit Task
         + Use a checkbox list with tag names
             + Input at the end to add tags if needed
         + Selector to select group with a "new" choice that adds a text input and a color input for the new groups.
     + Filtered vues
+        + Tags
+        + Groups
+        + Hidden tasks
