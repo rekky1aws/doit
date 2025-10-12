@@ -4,6 +4,10 @@ Required features :
 + Create a Task
 + Edit a task
 + Validate a task
+    + 1 <= Signifiance <= 5
+    + 1 <= Urgency <= 5
+    + 
++ Push Task to DB after validation
 + Filtering Tasks
 
 Bonus features :
@@ -24,7 +28,7 @@ Bonus features :
 (It's funny, it's the todo list's todo list)
 
 + Task
-    + Change `isDone (bool)` to `status (string: done, urgent, pending)`
+    + Remove `isDone (bool)` since we already have that information (true if `doneDate` is defined, false if it's NULL)
     + Add a `hidden (bool)` field to know if we display or not the 
 
 + Views
