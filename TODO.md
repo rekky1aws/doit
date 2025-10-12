@@ -1,4 +1,15 @@
 # TODO
+## Shorten
+Required features :
+    + Create a Task
+    + Edit a task
+    + Validate a task
+    + Filtering Tasks
+
+Bonus features :
+    + Calendar
+
+## General
 (It's funny, it's the todo list's todo list)
 
 + Task
