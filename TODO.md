@@ -9,9 +9,12 @@ Required features :
     + 
 + Push Task to DB after validation
 + Filtering Tasks
++ Users
 
 Bonus features :
     + Calendar
+    + Sticky Note
+        + Grab a task and add it the list of the tasks of the day (only frontend and clears after 24h or after validation)
 
 ## Pending
 + Edit task vue
