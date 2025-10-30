@@ -31,6 +31,7 @@ final class EditController extends AbstractController
         $form = $this->createForm(EditTaskType::class, $task);
 
         return $this->render('edit/index.html.twig', [
+            'task' => $task,
             'task_form' => $form,
             'controller_name' => 'edit task '.$id,
         ]);
