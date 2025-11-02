@@ -1,6 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}DoIt - Task edition{% endblock %}
+{% block title %}
+DoIt - 
+{% if task|default(null) %} {# Check if editing or creating #}
+    Edit Task
+  {% else %}
+    Create Task
+  {% endif %}
+{% endblock %}
+
 {% block stylesheets %}
 <link rel="stylesheet" href="{{ asset('styles/taskForm.css') }}">
 {% endblock %}
