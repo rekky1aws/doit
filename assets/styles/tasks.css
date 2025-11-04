@@ -54,7 +54,7 @@
 .task-tags {
   display: flex;
   gap: 0.25rem;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .task-tags > .tag {
