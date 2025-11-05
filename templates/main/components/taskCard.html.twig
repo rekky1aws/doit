@@ -1,13 +1,15 @@
-<div class="task-card">
+<div class="task-card {{ (task.isDone) ? 'task-done' : '' }}">
   <div class="task-group group" style="background-color: {{ task.taskGroup.color }};">{{ task.taskGroup.name }} </div>
   <div class="task-top">
     <div class="task-name"> {{ task.name }} </div>
-    {% if task.isDone %}
-      <div class="task-status status-done"></div>
-    {% else %}
-      <div class="task-status status-pending"></div>
-    {% endif %}
-    <a href="{{ path('app_edit_by_id', {id: task.id}) }}">Edit</a>
+    <div class="task-top-right">
+      <a href="{{ path('app_edit_by_id', {id: task.id}) }}">Edit</a> {# TODO : Add a pictogram instead of basic text #}
+      {% if task.isDone %}
+        <div class="task-status status-done"></div>
+      {% else %}
+        <div class="task-status status-pending"></div>
+      {% endif %}
+    </div>
   </div>
   <div class="taks-middle">
     <div class="task-tags">
