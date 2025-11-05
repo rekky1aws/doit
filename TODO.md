@@ -45,6 +45,7 @@ Bonus features :
             + Make tags clickable and redirecting to a view that displays only task with this tag
             + Make groups clickable and redirecting to a view that displays only task in this group
             + Better style for rating
+            + Edit pictogram instead of plain text
         + TagsList
         + GroupsList
         + Header
