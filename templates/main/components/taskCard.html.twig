@@ -23,7 +23,13 @@
   </div>
   <div class="task-bottom">
     {% if task.date %}
-      <div class="task-date"> {{ task.date|date("d/m/Y") }} </div>
+      {% if task.date|date("Y-m-d") < "now"|date("Y-m-d")%}
+        <div class="task-date task-date-deadline-exceeded">
+      {% else %}
+        <div class="task-date">
+      {% endif %}
+      
+       {{ task.date|date("d/m/Y") }} </div>
       <span> - </span>
     {% endif %}
     <div class="task-urgency rating"> {% include "main/components/rating.html.twig" with {'value': task.urgency, 'max': 5} %} </div>
