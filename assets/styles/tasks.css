@@ -79,6 +79,12 @@
   border-radius: 1rem;
 }
 
+.task-date-deadline-exceeded {
+  color: red;
+  font-weight: bold;
+  animation: 2s infinite wobble;
+}
+
 .rating {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -110,4 +116,27 @@
   background-color: white;
   border: 1px dashed gray;
   transform: scale(0.9);
+}
+
+@keyframes wobble {
+   0%, 30%, 100% {
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    5% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg) scale(1.2);
+    }
+
+    10% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg) scale(1.2);
+    }
+
+    15% {
+        -webkit-transform: rotate(calc(-5deg / 1.8));
+        transform: rotate(calc(-5deg / 1.8)) scale(1);
+    }
 }
