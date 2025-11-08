@@ -23,11 +23,11 @@ class EditTaskType extends AbstractType
             ->add('doneDate')
             ->add('taskGroup', EntityType::class, [
                 'class' => Group::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name',
             ])
             ->add('tags', EntityType::class, [
                 'class' => Tag::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name',
                 'multiple' => true,
             ])
         ;
