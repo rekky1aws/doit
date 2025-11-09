@@ -24,11 +24,13 @@ class EditTaskType extends AbstractType
             ->add('taskGroup', EntityType::class, [
                 'class' => Group::class,
                 'choice_label' => 'name',
+                'expanded' => true,
             ])
             ->add('tags', EntityType::class, [
                 'class' => Tag::class,
                 'choice_label' => 'name',
                 'multiple' => true,
+                'expanded' => true,
             ])
         ;
     }
