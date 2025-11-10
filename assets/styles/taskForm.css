@@ -54,3 +54,25 @@ h2 {
 #edit_task_taskGroup > input {
   display:none;
 }
+
+#edit_task_tags {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem
+}
+
+#edit_task_tags > label {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  user-select: none;
+}
+
+#edit_task_tags > input:checked +  label {
+  background-color: lightgreen;
+}
+
+#edit_task_tags > input {
+  display:none;
+}
