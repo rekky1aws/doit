@@ -33,3 +33,24 @@ label {
 h2 {
   text-align: center;
 }
+
+#edit_task_taskGroup {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem
+}
+
+#edit_task_taskGroup > label {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  user-select: none;
+}
+
+#edit_task_taskGroup > input:checked +  label {
+  background-color: slateblue;
+}
+
+#edit_task_taskGroup > input {
+  display:none;
+}
