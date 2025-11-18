@@ -9,6 +9,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class EditTaskType extends AbstractType
 {
@@ -25,12 +26,17 @@ class EditTaskType extends AbstractType
                 'class' => Group::class,
                 'choice_label' => 'name',
                 'expanded' => true,
+                'label' => false,
             ])
             ->add('tags', EntityType::class, [
                 'class' => Tag::class,
                 'choice_label' => 'name',
                 'multiple' => true,
                 'expanded' => true,
+                'label' => false,
+            ])
+            ->add('save', SubmitType::class, [
+                'attr' => ['class' => 'save']
             ])
         ;
     }
