@@ -97,8 +97,24 @@ DoIt -
       {% endif %}
     >
   </div>
-  {# TODO : Add group selector #}
-  {# TODO : Add checkbox tags selector #}
+
+  <div class="form-field task-form-field">
+    <fieldset>
+      <legend>Task Group</legend>
+      {{ form_row(task_form.taskGroup) }}
+    </fieldset>
+  </div>
+
+  <div class="form-field task-form-field">
+    <fieldset>
+      <legend>Tags</legend>
+      {{ form_row(task_form.tags) }}
+    </fieldset>
+  </div>
+
+  <div class="form-field task-form-field">
+    {{ form_widget(task_form.save, { 'label': 'Submit' }) }}
+  </div>
 
 {{ form_end(task_form) }}
 </div>
