@@ -77,10 +77,24 @@ h2 {
   user-select: none;
 }
 
-#edit_task_tags > input:checked +  label {
+#edit_task_tags > input:checked + label {
   background-color: lightgreen;
 }
 
 #edit_task_tags > input {
   display:none;
+}
+
+#edit_task_save {
+  width: 100%;
+  margin: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: none;
+  transition: 0.15s ease;
+}
+
+#edit_task_save:hover {
+  transform: scale(1.05);
+  background-color: lightgreen;
 }
