@@ -21,9 +21,6 @@ Bonus features :
     + Finish form html layout
         + Group selector
         + Checkbox tags selector
-    + Add a submit button
-        + "Save" if task exists
-        + "Create" if task is new
 
 + Edit controller
     + On GET => edit vue
