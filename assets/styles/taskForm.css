@@ -92,6 +92,7 @@ h2 {
   border-radius: 1rem;
   border: none;
   transition: 0.15s ease;
+  background-color: #DDDDDD;
 }
 
 #edit_task_save:hover {
