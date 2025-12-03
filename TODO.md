@@ -7,14 +7,17 @@ Required features :
     + 1 <= Signifiance <= 5
     + 1 <= Urgency <= 5
     + 
-+ Push Task to DB after validation
++ Process task
+    + Check data
+    + Push to DB
+    + Display Flash Message
 + Filtering Tasks
 + Users
 
 Bonus features :
-    + Calendar
-    + Sticky Note
-        + Grab a task and add it the list of the tasks of the day (only frontend and clears after 24h or after validation)
++ Calendar
++ Sticky Note
+    + Grab a task and add it the list of the tasks of the day (only frontend and clears after 24h or after validation)
 
 ## Pending
 + Edit task vue
